@@ -1,0 +1,1084 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Trương Gia Bảo | Personal CV</title>
+  <meta name="description" content="CV cá nhân của Trương Gia Bảo, sinh viên Đại học Nguyễn Tất Thành, định hướng phát triển sự nghiệp trong lĩnh vực ngân hàng.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #3978d4;
+      --primary-dark: #2056a6;
+      --blue-light: #eaf3ff;
+      --background: #f5f8fd;
+      --text: #26364d;
+      --muted: #708097;
+      --white: #ffffff;
+      --border: #e3ebf5;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      font-family: "Be Vietnam Pro", sans-serif;
+      color: var(--text);
+      background: var(--background);
+      line-height: 1.75;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1120px, 91%);
+      margin: 0 auto;
+    }
+
+    /* NAVIGATION */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255,255,255,.94);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(14px);
+    }
+
+    nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      color: var(--primary-dark);
+      font-size: 23px;
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+
+    .brand span {
+      color: #8cb8f8;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 23px;
+      flex-wrap: wrap;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .nav-cta {
+      background: var(--primary);
+      color: white !important;
+      padding: 10px 16px;
+      border-radius: 10px;
+    }
+
+    /* HERO */
+    .hero {
+      padding: 82px 0;
+      background:
+        radial-gradient(circle at 85% 10%, #dceaff 0, transparent 30%),
+        linear-gradient(135deg, #f9fbff, #edf5ff);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr .75fr;
+      align-items: center;
+      gap: 65px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #e3efff;
+      color: var(--primary-dark);
+      border-radius: 30px;
+      padding: 8px 14px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .5px;
+      margin-bottom: 22px;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background: #38a77b;
+      border-radius: 50%;
+    }
+
+    h1 {
+      font-size: clamp(38px, 5.5vw, 63px);
+      line-height: 1.18;
+      letter-spacing: -2px;
+      margin-bottom: 20px;
+    }
+
+    h1 span {
+      color: var(--primary);
+    }
+
+    .hero-description {
+      max-width: 590px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 13px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 19px;
+      border-radius: 11px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 700;
+      transition: .2s;
+    }
+
+    .button-primary {
+      background: var(--primary);
+      color: white;
+      box-shadow: 0 8px 20px #3978d426;
+    }
+
+    .button-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    .button-outline {
+      background: white;
+      border-color: #d7e3f4;
+      color: var(--text);
+    }
+
+    .button-outline:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .photo-area {
+      position: relative;
+      max-width: 350px;
+      width: 100%;
+      justify-self: center;
+    }
+
+    .photo-frame {
+      background: white;
+      padding: 12px;
+      border-radius: 25px;
+      box-shadow: 0 24px 65px #2d52851b;
+      transform: rotate(2deg);
+    }
+
+    .profile-photo {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center 35%;
+      border-radius: 17px;
+    }
+
+    .photo-caption {
+      text-align: center;
+      padding: 16px 8px 8px;
+    }
+
+    .photo-caption h2 {
+      font-size: 18px;
+    }
+
+    .photo-caption p {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .photo-badge {
+      position: absolute;
+      right: -25px;
+      bottom: 75px;
+      padding: 12px 16px;
+      border-radius: 13px;
+      background: white;
+      box-shadow: 0 10px 30px #294d801c;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    /* GENERAL SECTIONS */
+    section {
+      padding: 76px 0;
+    }
+
+    .section-heading {
+      margin-bottom: 34px;
+    }
+
+    .section-heading small {
+      color: var(--primary);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(25px, 3.5vw, 35px);
+      letter-spacing: -.8px;
+      margin-top: 5px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 6px;
+    }
+
+    .section-center {
+      text-align: center;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      padding: 27px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 19px;
+      box-shadow: 0 8px 25px #254c7c08;
+    }
+
+    .card h3 {
+      font-size: 16px;
+      margin-bottom: 13px;
+    }
+
+    .card p,
+    .card li {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .card ul {
+      padding-left: 19px;
+    }
+
+    .card li + li {
+      margin-top: 8px;
+    }
+
+    .card-icon {
+      display: grid;
+      place-items: center;
+      width: 43px;
+      height: 43px;
+      background: var(--blue-light);
+      border-radius: 12px;
+      font-size: 21px;
+      margin-bottom: 17px;
+    }
+
+    /* PERSONAL INFO */
+    .info-list {
+      display: grid;
+      gap: 17px;
+    }
+
+    .info-row {
+      display: grid;
+      grid-template-columns: 35px 1fr;
+      gap: 10px;
+      align-items: start;
+    }
+
+    .info-symbol {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      background: #f0f6ff;
+    }
+
+    .info-row strong {
+      display: block;
+      font-size: 12px;
+    }
+
+    .info-row span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      overflow-wrap: anywhere;
+    }
+
+    .notice {
+      margin-top: 17px;
+      background: #f1f6ff;
+      border-radius: 12px;
+      padding: 13px;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    /* SKILLS */
+    .soft-section {
+      background: #edf4fd;
+    }
+
+    .skill {
+      margin-top: 20px;
+    }
+
+    .skill:first-of-type {
+      margin-top: 10px;
+    }
+
+    .skill-label {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      font-size: 11px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .skill-label span:last-child {
+      color: var(--primary);
+    }
+
+    .skill-track {
+      height: 7px;
+      background: #e8eef7;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .skill-progress {
+      height: 100%;
+      background: linear-gradient(90deg, #8bb9fb, #3978d4);
+      border-radius: 20px;
+    }
+
+    .skill-note {
+      margin-top: 18px;
+      font-size: 10px !important;
+    }
+
+    /* EXPERIENCE TIMELINE */
+    .timeline {
+      display: grid;
+      gap: 20px;
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 16px;
+    }
+
+    .timeline-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 13px;
+      background: #e4efff;
+      display: grid;
+      place-items: center;
+      font-size: 20px;
+    }
+
+    .timeline-content {
+      padding: 22px 25px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+    }
+
+    .timeline-content h3 {
+      font-size: 15px;
+    }
+
+    .timeline-content .meta {
+      font-size: 10px;
+      color: var(--primary);
+      font-weight: 700;
+      margin: 5px 0 9px;
+    }
+
+    .timeline-content p {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* CAREER GOAL */
+    .career-box {
+      padding: 42px;
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      background: linear-gradient(135deg, #e8f2ff, white);
+      border: 1px solid #dce9fa;
+      border-radius: 24px;
+    }
+
+    .career-box h3 {
+      font-size: 23px;
+      margin-bottom: 13px;
+    }
+
+    .career-box p {
+      color: var(--muted);
+      font-size: 13px;
+      max-width: 660px;
+      margin: auto;
+    }
+
+    .goal-tag {
+      display: inline-block;
+      margin: 20px 5px 0;
+      padding: 10px 15px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--primary-dark);
+    }
+
+    /* CONTACT */
+    .contact-box {
+      text-align: center;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 38px 25px;
+    }
+
+    .contact-box p {
+      font-size: 13px;
+      color: var(--muted);
+      margin: 10px 0 22px;
+    }
+
+    footer {
+      padding: 24px 0;
+      text-align: center;
+      background: white;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 760px) {
+      nav {
+        padding: 15px 0;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        gap: 12px 16px;
+      }
+
+      .hero {
+        padding: 55px 0;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .photo-area {
+        width: min(300px, 85%);
+      }
+
+      .photo-badge {
+        right: -15px;
+      }
+
+      section {
+        padding: 58px 0;
+      }
+
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+
+      .career-box {
+        padding: 28px 20px;
+      }
+
+      .timeline-item {
+        grid-template-columns: 35px 1fr;
+        gap: 10px;
+      }
+
+      .timeline-icon {
+        width: 35px;
+        height: 35px;
+      }
+
+      .timeline-content {
+        padding: 18px;
+      }
+    }
+
+    /* PRINT / SAVE AS PDF */
+    @media print {
+      @page {
+        size: A4;
+        margin: 12mm;
+      }
+
+      body {
+        background: white;
+        font-size: 10pt;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+
+      header,
+      .hero-actions,
+      .contact-section,
+      footer,
+      .photo-badge {
+        display: none !important;
+      }
+
+      .container {
+        width: 100%;
+      }
+
+      .hero,
+      section,
+      .soft-section {
+        padding: 20px 0;
+        background: white;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1.5fr .7fr;
+        gap: 20px;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      .photo-area {
+        max-width: 190px;
+      }
+
+      .profile-photo {
+        aspect-ratio: 4 / 5;
+      }
+
+      .card,
+      .timeline-content,
+      .career-box {
+        box-shadow: none;
+        break-inside: avoid;
+      }
+
+      .grid-2 {
+        gap: 10px;
+      }
+
+      .section-heading {
+        margin-bottom: 15px;
+      }
+
+      section {
+        break-inside: avoid;
+      }
+
+      .card {
+        padding: 16px;
+      }
+
+      .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav class="container">
+    <a class="brand" href="#home">GB<span>.</span></a>
+
+    <div class="nav-links">
+      <a href="#about">Giới thiệu</a>
+      <a href="#education">Học vấn</a>
+      <a href="#skills">Kỹ năng</a>
+      <a href="#experience">Kinh nghiệm</a>
+      <a href="#career">Mục tiêu</a>
+      <a href="#contact" class="nav-cta">Liên hệ</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <!-- GIỚI THIỆU -->
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+
+      <div>
+        <div class="eyebrow">
+          <span class="status-dot"></span>
+          PERSONAL CURRICULUM VITAE
+        </div>
+
+        <h1>Trương<br><span>Gia Bảo.</span></h1>
+
+        <p class="hero-description">
+          Sinh viên Đại học Nguyễn Tất Thành, có tinh thần trách nhiệm,
+          khả năng tập trung và yêu thích các hoạt động tập thể.
+          Tôi mong muốn phát triển kiến thức, kỹ năng chuyên môn
+          và từng bước xây dựng sự nghiệp trong lĩnh vực ngân hàng.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#about" class="button button-primary">
+            Xem hồ sơ của tôi ↗
+          </a>
+
+          <button class="button button-outline" onclick="window.print()">
+            In / Lưu CV PDF ↓
+          </button>
+        </div>
+      </div>
+
+      <div class="photo-area">
+        <div class="photo-frame">
+          <img
+            src="IMG_1899.jpeg"
+            alt="Ảnh giới thiệu của Trương Gia Bảo"
+            class="profile-photo"
+          >
+
+          <div class="photo-caption">
+            <h2>Trương Gia Bảo</h2>
+            <p>Sinh viên · Định hướng ngành ngân hàng</p>
+          </div>
+        </div>
+
+        <div class="photo-badge">🎯 Sẵn sàng học hỏi</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- THÔNG TIN CÁ NHÂN -->
+  <section id="about">
+    <div class="container">
+
+      <div class="section-heading">
+        <small>01 — ABOUT ME</small>
+        <h2>Thông tin cá nhân</h2>
+        <p>Giới thiệu tổng quan về bản thân và định hướng phát triển.</p>
+      </div>
+
+      <div class="grid-2">
+
+        <article class="card">
+          <div class="card-icon">👤</div>
+          <h3>Về tôi</h3>
+
+          <p>
+            Tôi là người có tinh thần trách nhiệm, kiên trì và có thể
+            duy trì sự tập trung trong thời gian dài để hoàn thành
+            công việc. Tôi luôn sẵn sàng tiếp thu kiến thức mới,
+            rèn luyện bản thân và thích nghi với môi trường làm việc.
+          </p>
+
+          <p style="margin-top: 13px;">
+            Thông qua việc tham gia hoạt động tập thể và từng đảm nhận
+            vai trò lớp phó, tôi có cơ hội rèn luyện khả năng phối hợp,
+            tổ chức công việc và tinh thần trách nhiệm với tập thể.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">📋</div>
+          <h3>Thông tin cơ bản</h3>
+
+          <div class="info-list">
+            <div class="info-row">
+              <div class="info-symbol">👤</div>
+              <div>
+                <strong>Họ và tên</strong>
+                <span>Trương Gia Bảo</span>
+              </div>
+            </div>
+
+            <div class="info-row">
+              <div class="info-symbol">🎓</div>
+              <div>
+                <strong>Trường học</strong>
+                <span>Đại học Nguyễn Tất Thành</span>
+              </div>
+            </div>
+
+            <div class="info-row">
+              <div class="info-symbol">🏦</div>
+              <div>
+                <strong>Lĩnh vực quan tâm</strong>
+                <span>Ngân hàng và dịch vụ tài chính</span>
+              </div>
+            </div>
+
+            <div class="info-row">
+              <div class="info-symbol">⚽</div>
+              <div>
+                <strong>Sở thích</strong>
+                <span>Bóng đá, bóng rổ và hoạt động tập thể</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="notice">
+            Bạn có thể bổ sung email, số điện thoại và địa chỉ nghề nghiệp
+            phù hợp trước khi gửi hồ sơ ứng tuyển.
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HỌC VẤN -->
+  <section class="soft-section" id="education">
+    <div class="container">
+
+      <div class="section-heading">
+        <small>02 — EDUCATION</small>
+        <h2>Học vấn</h2>
+        <p>Nền tảng học tập và định hướng phát triển chuyên môn.</p>
+      </div>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-icon">🎓</div>
+
+          <div class="timeline-content">
+            <h3>Đại học Nguyễn Tất Thành</h3>
+            <div class="meta">GIÁO DỤC ĐẠI HỌC</div>
+
+            <p>
+              Đang theo học tại Đại học Nguyễn Tất Thành.
+              Hướng đến việc xây dựng nền tảng kiến thức,
+              rèn luyện kỹ năng nghề nghiệp và tích lũy kinh nghiệm
+              phục vụ công việc trong tương lai.
+            </p>
+
+            <p style="margin-top: 10px;">
+              <strong>Ngành học:</strong> [Điền ngành học của bạn]<br>
+              <strong>Thời gian:</strong> [Điền năm bắt đầu – dự kiến tốt nghiệp]
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- KỸ NĂNG -->
+  <section id="skills">
+    <div class="container">
+
+      <div class="section-heading">
+        <small>03 — SKILLS</small>
+        <h2>Kỹ năng và thế mạnh</h2>
+        <p>Những năng lực hỗ trợ tôi trong học tập và công việc.</p>
+      </div>
+
+      <div class="grid-2">
+
+        <article class="card">
+          <div class="card-icon">💡</div>
+          <h3>Kỹ năng cá nhân</h3>
+
+          <div class="skill">
+            <div class="skill-label">
+              <span>Tinh thần trách nhiệm</span>
+              <span>Thế mạnh</span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-progress" style="width: 90%;"></div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <div class="skill-label">
+              <span>Khả năng tập trung</span>
+              <span>Thế mạnh</span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-progress" style="width: 90%;"></div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <div class="skill-label">
+              <span>Làm việc nhóm</span>
+              <span>Tiếp tục phát triển</span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-progress" style="width: 75%;"></div>
+            </div>
+          </div>
+
+          <p class="skill-note">
+            Các thanh hiển thị mang tính minh họa, hãy điều chỉnh theo
+            năng lực thực tế của bạn.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">🧩</div>
+          <h3>Thế mạnh nổi bật</h3>
+
+          <ul>
+            <li>Kiên trì và có khả năng tập trung vào nhiệm vụ.</li>
+            <li>Có ý thức trách nhiệm với công việc được giao.</li>
+            <li>Từng đảm nhận vai trò lớp phó trong môi trường học tập.</li>
+            <li>Có trải nghiệm phối hợp cùng đồng đội qua thể thao.</li>
+            <li>Sẵn sàng học hỏi, tiếp thu góp ý và cải thiện bản thân.</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- KINH NGHIỆM VÀ HOẠT ĐỘNG -->
+  <section class="soft-section" id="experience">
+    <div class="container">
+
+      <div class="section-heading">
+        <small>04 — EXPERIENCE</small>
+        <h2>Kinh nghiệm và hoạt động</h2>
+        <p>Những trải nghiệm giúp tôi rèn luyện kỹ năng và tinh thần tập thể.</p>
+      </div>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-icon">📋</div>
+
+          <div class="timeline-content">
+            <h3>Lớp phó</h3>
+            <div class="meta">HOẠT ĐỘNG TRONG MÔI TRƯỜNG HỌC TẬP</div>
+
+            <p>
+              Từng đảm nhận vai trò lớp phó, hỗ trợ các công việc chung
+              của lớp và phối hợp với các thành viên. Trải nghiệm này
+              giúp tôi rèn luyện tinh thần trách nhiệm, tính chủ động
+              và khả năng phối hợp trong tập thể.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-icon">⚽</div>
+
+          <div class="timeline-content">
+            <h3>Hoạt động bóng đá</h3>
+            <div class="meta">THỂ THAO VÀ THÀNH TÍCH</div>
+
+            <p>
+              Tham gia bóng đá và từng đạt một số thành tích tại các giải đấu.
+              Qua đó, tôi học được tinh thần kỷ luật, sự kiên trì,
+              khả năng phối hợp và quyết tâm theo đuổi mục tiêu chung.
+            </p>
+
+            <p style="margin-top: 10px;">
+              <strong>Thành tích cụ thể:</strong>
+              [Bổ sung tên giải đấu, năm và giải thưởng đã đạt được]
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-icon">🏀</div>
+
+          <div class="timeline-content">
+            <h3>Hoạt động bóng rổ và tập thể</h3>
+            <div class="meta">PHÁT TRIỂN KỸ NĂNG MỀM</div>
+
+            <p>
+              Tham gia các hoạt động thể thao, tạo cơ hội rèn luyện
+              tinh thần đồng đội, giao tiếp và khả năng phối hợp với
+              những người có mục tiêu chung.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-icon">💼</div>
+
+          <div class="timeline-content">
+            <h3>Kinh nghiệm làm việc</h3>
+            <div class="meta">BỔ SUNG KHI CÓ KINH NGHIỆM THỰC TẾ</div>
+
+            <p>
+              [Điền tên đơn vị, vị trí, thời gian làm việc và nhiệm vụ
+              từng đảm nhận. Nếu chưa có kinh nghiệm, có thể thay bằng
+              dự án học tập hoặc hoạt động tình nguyện phù hợp.]
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MỤC TIÊU NGHỀ NGHIỆP -->
+  <section id="career">
+    <div class="container">
+
+      <div class="section-heading section-center">
+        <small>05 — CAREER OBJECTIVE</small>
+        <h2>Mục tiêu nghề nghiệp</h2>
+        <p>Định hướng phát triển lâu dài trong lĩnh vực tài chính – ngân hàng.</p>
+      </div>
+
+      <div class="career-box">
+        <div class="card-icon" style="margin: 0 auto 18px;">🏦</div>
+
+        <h3>Phát triển sự nghiệp trong ngành ngân hàng</h3>
+
+        <p>
+          Tôi mong muốn xây dựng sự nghiệp trong lĩnh vực ngân hàng,
+          bắt đầu bằng việc học hỏi quy trình chuyên môn, nâng cao
+          kỹ năng giao tiếp, tư duy phân tích và khả năng phục vụ khách hàng.
+          Trong quá trình làm việc, tôi hướng đến việc tích lũy kinh nghiệm,
+          hoàn thành tốt nhiệm vụ và tạo ra giá trị bền vững cho tổ chức.
+        </p>
+
+        <div>
+          <span class="goal-tag">📘 Nâng cao chuyên môn</span>
+          <span class="goal-tag">🤝 Phát triển kỹ năng</span>
+          <span class="goal-tag">📈 Thăng tiến nghề nghiệp</span>
+        </div>
+
+        <p style="margin-top: 22px;">
+          <strong>Mục tiêu thu nhập dài hạn:</strong>
+          50 triệu đồng/tháng, gắn với năng lực, kinh nghiệm
+          và sự phát triển nghề nghiệp.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LIÊN HỆ -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-box">
+
+        <div class="section-heading section-center">
+          <small>06 — CONTACT</small>
+          <h2>Kết nối với tôi</h2>
+        </div>
+
+        <p>
+          Tôi sẵn sàng tìm hiểu các cơ hội học tập, thực tập
+          và phát triển nghề nghiệp phù hợp.
+        </p>
+
+        <div class="hero-actions" style="justify-content: center;">
+          <a class="button button-primary" href="mailto:EMAIL_CUA_BAN">
+            ✉ Gửi email
+          </a>
+
+          <button class="button button-outline" onclick="window.print()">
+            In / Lưu CV PDF
+          </button>
+        </div>
+
+        <div class="notice" style="max-width: 560px; margin: 22px auto 0;">
+          Email: [Điền email của bạn] · Điện thoại: [Điền số điện thoại]
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    © <span id="currentYear"></span> Trương Gia Bảo · Personal CV
+    <br>
+    Designed with care.
+  </div>
+</footer>
+
+<script>
+  // Cập nhật năm tự động
+  document.getElementById("currentYear").textContent =
+    new Date().getFullYear();
+</script>
+
+</body>
+</html>
